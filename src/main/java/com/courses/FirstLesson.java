@@ -41,18 +41,17 @@ public class FirstLesson {
 
         WebElement filter = driver.findElement(By.xpath("//select[@class ='product_sort_container']" ));
         Select select = new Select(filter);
-        List<WebElement> listOfOptions = select.getOptions();
         select.selectByValue("za");
 
-        List<WebElement> listsecond = driver.findElements(By.xpath("//button[@class='btn_primary btn_inventory']"));
-        WebElement addToCartsecond = listsecond.get(3);
-        addToCartsecond.click();
+        List<WebElement> secondList = driver.findElements(By.xpath("//button[@class='btn_primary btn_inventory']"));
+        WebElement addToCartSecond = secondList.get(3);
+        addToCartSecond.click();
 
         WebElement menu = driver.findElement(By.xpath("//button[@id ='react-burger-menu-btn']"));
         menu.click();
 
         WebElement logout = driver.findElement(By.xpath("//a[@id='logout_sidebar_link']"));
-        WebDriverWait wait= new WebDriverWait(driver, 100000);
+        WebDriverWait wait= new WebDriverWait(driver, 20);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='logout_sidebar_link']")));
 
         logout.click();
