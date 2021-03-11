@@ -56,7 +56,7 @@ public class FirstLesson {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@id='logout_sidebar_link']")));
 
         logout.click();
-
+        driver.quit();
 
 
     }
